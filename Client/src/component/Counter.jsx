@@ -25,13 +25,13 @@ function Counter() {
     setMala(newMala);
 
     if (newCount === 1 && newMala === 0) {
-      await fetch("http://localhost:8000/api/counter", {
+      await fetch("https://rms-backend-f9u6.onrender.com/api/counter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ count: newCount, mala: newMala, date }),
       });
     } else {
-      await fetch("http://localhost:8000/api/counter", {
+      await fetch("https://rms-backend-f9u6.onrender.com/api/counter", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ count: newCount, mala: newMala, date }),
@@ -41,7 +41,7 @@ function Counter() {
 
   useEffect(() => {
     const fetchCounter = async () => {
-      const res = await fetch(`http://localhost:8000/api/counter`, {
+      const res = await fetch(https://rms-backend-f9u6.onrender.com/api/counter`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
