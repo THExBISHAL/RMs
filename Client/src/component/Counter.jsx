@@ -41,7 +41,7 @@ function Counter() {
 
   useEffect(() => {
     const fetchCounter = async () => {
-      const res = await fetch(https://rms-backend-f9u6.onrender.com/api/counter`, {
+      const res = await fetch("https://rms-backend-f9u6.onrender.com/api/counter", {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
