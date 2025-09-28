@@ -18,7 +18,7 @@ function Counter() {
   function formatDate(isoDate) {
     const date = new Date(isoDate);
     const day = String(date.getDate()).padStart(2, "0");
-    const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are 0-indexed
+    const month = String(date.getMonth() + 1).padStart(2, "0");
     const year = date.getFullYear();
 
     return `${day}/${month}/${year}`;
@@ -26,7 +26,7 @@ function Counter() {
 
   useEffect(() => {
     const fetchCounter = async () => {
-      const res = await fetch(`http://localhost:8000/api/counter/history`, {
+      const res = await fetch(`https://rms-backend-f9u6.onrender.com/api/counter/history`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       });
