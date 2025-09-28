@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://rmsbishal.netlify.app/",
+    origin: "https://rmsbishal.onrender.com",
     methods: ["GET", "PUT", "POST"],
     credentials: true,
   })
